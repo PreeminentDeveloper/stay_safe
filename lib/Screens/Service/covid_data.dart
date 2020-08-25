@@ -1,0 +1,5 @@
+class CovidData{
+
+  Map gloabal = {};
+
+}
