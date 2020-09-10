@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:stay_safe/Screens/home.dart';
 import 'package:stay_safe/Screens/landing_page.dart';
 import 'package:stay_safe/Screens/statistics.dart';
@@ -17,6 +18,17 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
+      //   builder: (context, widget) => ResponsiveWrapper.builder(
+      //   widget,
+      //   maxWidth: 1200,
+      //   minWidth: 480,
+      //   defaultScale: true,
+      //   breakpoints: [
+      //     ResponsiveBreakpoint.resize(480, name: MOBILE),
+      //     ResponsiveBreakpoint.autoScale(800, name: TABLET),
+      //     ResponsiveBreakpoint.resize(1000, name: DESKTOP),
+      //   ],
+      // ),
         debugShowCheckedModeBanner: false,
         title: 'Stay Safe',
         theme: ThemeData(
