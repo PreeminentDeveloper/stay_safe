@@ -5,6 +5,7 @@ import 'package:http/http.dart';
 import 'package:stay_safe/Screens/Service/covid.dart';
 import 'package:stay_safe/Screens/Service/recent_covid_cases.dart';
 import 'package:stay_safe/Screens/Shared/symptoms.dart';
+import 'package:stay_safe/Screens/diagnostic_test.dart';
 import 'package:stay_safe/Screens/predictions.dart';
 import 'package:stay_safe/Screens/statistics.dart';
 
@@ -264,10 +265,40 @@ class _HomeState extends State<Home> {
                                 width: orientation == Orientation.portrait
                                     ? width / 18
                                     : height / 18,
-                              )
+                              ),
                             ],
                           );
                         },
+                      ),
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: orientation == Orientation.portrait
+                              ? height / 32
+                              : width / 32,
+                          horizontal: orientation == Orientation.portrait
+                              ? width / 18
+                              : height / 18),
+                        child: FlatButton(
+                          padding: EdgeInsets.all(15),
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      DiagnosticTest())),
+                          color: Color.fromRGBO(73, 50, 155, 1.0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          child: Text('Take a diagnostic test',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold)),
+                          textColor: Colors.white,
+                        ),
                       ),
                     ),
                   ],
