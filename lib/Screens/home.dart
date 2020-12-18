@@ -50,8 +50,8 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(73, 50, 155, 1.0),
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Container(
             color: Color.fromRGBO(237, 231, 255, 1.0),
             child: Column(
